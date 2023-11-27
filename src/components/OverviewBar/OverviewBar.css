@@ -1,0 +1,51 @@
+.overview_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+.overview_title {
+    display: flex;
+    align-items: center;
+}
+
+.overview_title > h1 {
+    color: white;
+    font-size: 2vw;
+}
+
+#data_size {
+    font-size: 1.3vh;
+    margin-left: 0.5vw;
+    margin-top: 0.5vh;
+    color: white;
+    background-color: orangered;
+    border-radius: 50px;
+    padding: 0.1vw 0.3vw;
+}
+
+.icons {
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    color: white;
+}
+
+.icon_container {
+    background-color: rgb(44,59,67);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(44,59,67);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+}
+
+.icon_container:hover {
+    background-color: white;
+    color: black;
+}

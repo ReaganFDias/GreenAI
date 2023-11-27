@@ -1,0 +1,26 @@
+.bottom_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw 2vw 5vw;
+}
+
+.stats_container {
+    background-color: #133b45;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50px;
+    position: relative;
+}
+
+.stats_container > h1 {
+    color: white;
+    position: absolute;
+    margin: 1.5vh 0 0 1.5vw;
+}
+
+.recents_container {
+    background-color: rgb(19, 58, 68);
+    width: 48vw;
+    height: 20vw;
+    border-radius: 50px;
+}

@@ -1,0 +1,8 @@
+.workspace {
+    background-color: rgb(18,73,83);
+    height: 100vh;
+    width: 100vw;
+    border-radius: 40px 0 0 40px;
+    display: grid;
+    grid-template-rows: 20vh 35vh 45vh;
+  }
