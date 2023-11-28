@@ -1,9 +1,13 @@
 import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
-import folder_1 from '../../assets/folder_1.png'
-import folder_2 from '../../assets/folder_2.png'
-import folder_3 from '../../assets/folder_3.png'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFolder } from '@fortawesome/free-solid-svg-icons'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, EffectCards } from 'swiper/modules'
+import Sprout from '../../assets/sprout.png'
+import AniSprout from '../../assets/wave-hello-3-unscreen.gif'
+import 'swiper/css'
+import 'swiper/css/effect-cards'
+import 'swiper/css/autoplay'
 import './Folders.css'
 
 const Folders = () => {
@@ -12,31 +16,63 @@ const Folders = () => {
             <div className='subtitle'>
                 <h1 className='folder_title'>Manage your</h1>
                 <h1 className='folder_title'>files</h1>
-                <p className='desc'>Browse your files for sustainable management approach</p>
+                <div className='desc_container'>
+                    <p className='desc'>Browse your files for a more sustainable</p>
+                    <p className='desc'>management approach</p>
+                </div>
             </div>
-            <Carousel>
-                <Carousel.Item interval={1500}>
-                    <img src={folder_1} alt="" />
-                    <Carousel.Caption>
-                        <h3>Profile 1</h3>
-                        <p>p1</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={1500}>
-                    <img src={folder_2} alt="" />
-                    <Carousel.Caption>
-                        <h3>Profile 2</h3>
-                        <p>p2</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={1500}>
-                    <img src={folder_3} alt="" />
-                    <Carousel.Caption>
-                        <h3>Profile 3</h3>
-                        <p>p3</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <div className='mascot_folders'>
+                <div id='swiper_container'>
+                    <Swiper
+                        effect={'cards'}
+                        grabCursor={true}
+                        modules={[Autoplay, EffectCards]}
+                        className="mySwiper"
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                    >
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            Tech@Lilly
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            R&D
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            HR
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            Legal
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            Environmental
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            Procurement
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            Finance
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            Marketing
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <FontAwesomeIcon icon={faFolder} size='2xl'/>
+                            Management
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+                <video className='mascot' src={AniSprout} loop autoPlay muted></video>
+            </div>
         </div>
     )
 }

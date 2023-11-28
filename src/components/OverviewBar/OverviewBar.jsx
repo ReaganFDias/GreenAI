@@ -9,7 +9,7 @@ const OverviewBar = () => {
         <div className='overview_container'>
             <div className='overview_title'>
                 <h1>Overview</h1>
-                <div id='data_size'>185 GB</div>
+                <p id='data_size'>185 GB</p>
             </div>
             <SearchBar />
             <div className='icons'>

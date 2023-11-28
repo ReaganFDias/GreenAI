@@ -12,8 +12,10 @@ const SearchBar = () => {
 
     return (
         <div className='search_container'>
-            <input type='text' placeholder='Search something...' onChange={handleChange} value={searchInput} className='searchbar'></input>
-            <FontAwesomeIcon className='search_icon' icon={faSearch} size='l' />
+            <input type='text' placeholder='Search something...' onChange={handleChange} value={searchInput} className='searchbar_'></input>
+            <div className='search_icon_'>
+                <FontAwesomeIcon icon={faSearch} size='sm'/>
+            </div>
         </div>
     )
 }

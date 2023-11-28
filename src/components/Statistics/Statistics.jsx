@@ -1,13 +1,16 @@
 import React from 'react'
 import { linearGradientDef } from '@nivo/core'
 import { ResponsivePie } from '@nivo/pie'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFileLines, faCheck, faXmark, faEllipsis } from '@fortawesome/free-solid-svg-icons'
+import { motion } from 'framer-motion'
 import './Statistics.css'
 
 const Statistics = () => {
     return (
         <div className='bottom_container'>
             <div className='stats_container'>
-                <h1>Completion</h1>
+                <h1 id='stats_h1'>Complete</h1>
                 <ResponsivePie
                     data={[
                         {
@@ -80,7 +83,67 @@ const Statistics = () => {
                     
                 />
             </div>
-            <div className='recents_container'>Recents</div>
+            <div className='recents_container'>
+                <h1 id='stats_h1'>Recent</h1>
+                <div className='recents_grid'>
+                    <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
+                        <FontAwesomeIcon size='2xl' icon={faFileLines} />
+                        <div className='icon_name'>
+                            <p>Image_configuration.pdf</p>
+                            <div className='img_group'>
+                                <FontAwesomeIcon size='2xl' icon={faXmark} style={{color: '#ff1a1a',}} />
+                                <FontAwesomeIcon size='2xl' icon={faCheck} style={{color: '#00ff00',}} />
+                            </div>
+                        </div>
+                        <div className='date_size'>
+                            <p>Nov 28, 2023</p>
+                            <p>2.3 GB</p>
+                        </div>
+                    </motion.button>
+                    <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
+                        <FontAwesomeIcon size='2xl' icon={faFileLines} />
+                        <div className='icon_name'>
+                            <p>Knowledge_article.docx</p>
+                            <div className="img_group">
+                                <FontAwesomeIcon icon={faEllipsis} />
+                                <FontAwesomeIcon icon={faEllipsis} />
+                            </div>
+                        </div>
+                        <div className='date_size'>
+                            <p>Aug 15, 2006</p>
+                            <p>3 MB</p>
+                        </div>
+                    </motion.button>
+                    <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
+                        <FontAwesomeIcon size='2xl' icon={faFileLines} />
+                        <div className='icon_name'>
+                            <p>Data_protection_policy_23.pdf</p>
+                            <div className="img_group">
+                                <FontAwesomeIcon size='2xl' icon={faCheck} style={{color: '#00ff00',}} />
+                                <FontAwesomeIcon size='2xl' icon={faCheck} style={{color: '#00ff00',}} />
+                            </div>
+                        </div>
+                        <div className='date_size'>
+                            <p>Sep 01, 2023</p>
+                            <p>1.6 GB</p>
+                        </div>
+                    </motion.button>
+                    <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
+                        <FontAwesomeIcon size='2xl' icon={faFileLines} />
+                        <div className='icon_name'>
+                            <p>DUX776_2324.xlsx</p>
+                            <div className="img_group">
+                                <FontAwesomeIcon icon={faEllipsis} />
+                                <FontAwesomeIcon icon={faXmark} style={{color: '#ff1a1a',}} />
+                            </div>
+                        </div>
+                        <div className='date_size'>
+                            <p>Jan 13, 2021</p>
+                            <p>1.8 GB</p>
+                        </div>
+                    </motion.button>
+                </div>
+            </div>
         </div>
     )
 }

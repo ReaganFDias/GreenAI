@@ -10,7 +10,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div>
-                <h1 className='ai_name'>GreenAI</h1>
+                <h1 className='ai_name'>SPROUT</h1>
                 <FontAwesomeIcon className='ai_name_icon' icon={faLeaf} />
             </div>
             <div className='user_container'>
