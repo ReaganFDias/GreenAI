@@ -12,21 +12,6 @@
     align-content: flex-start;
 }
 
-.folder_title {
-    color: white;
-    font-size: 4.6rem;
-    background: rgb(0,255,198);
-    background: linear-gradient(90deg, rgba(0,255,198,1) 0%, rgba(123,243,118,1) 50%, rgba(224,230,0,1) 100%);
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
-    display: inline-block;
-}
-
 .desc_container {
     padding: 1.5vh 0 0 0;
 }
@@ -69,11 +54,11 @@
   }
   
   .swiper-slide:nth-child(4n) {
-    background-color: rgb(211, 122, 7);
+    background-color: rgb(213, 123, 7)
   }
   
   .swiper-slide:nth-child(5n) {
-    background-color: rgb(118, 163, 12);
+    background-color: rgb(117, 161, 12);
   }
   
   .swiper-slide:nth-child(6n) {

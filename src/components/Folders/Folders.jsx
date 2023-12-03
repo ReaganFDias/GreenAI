@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolder } from '@fortawesome/free-solid-svg-icons'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectCards } from 'swiper/modules'
-import Sprout from '../../assets/sprout.png'
 import AniSprout from '../../assets/wave-hello-3-unscreen.gif'
+import { Typewriter } from '../../components'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import 'swiper/css/autoplay'
@@ -14,8 +14,7 @@ const Folders = () => {
     return (
         <div className='folders_container'>
             <div className='subtitle'>
-                <h1 className='folder_title'>Manage your</h1>
-                <h1 className='folder_title'>files</h1>
+                <Typewriter />
                 <div className='desc_container'>
                     <p className='desc'>Browse your files for a more sustainable</p>
                     <p className='desc'>management approach</p>

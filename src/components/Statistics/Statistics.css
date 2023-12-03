@@ -16,7 +16,7 @@
     font-size: 1.4vw;
     color: white;
     position: absolute;
-    margin: 2vh 0 0 2vw;
+    margin: 3vh 0 0 2vw;
 }
 
 .recents_container {
@@ -80,4 +80,12 @@
 
 .icon_name > p, .date_size > p {
     font-size: 0.8vw;
+}
+
+.percentage_complete {
+    position: absolute;
+    color: white;
+    bottom: 35%;
+    left: 40%;
+    font-size: 4vh;
 }

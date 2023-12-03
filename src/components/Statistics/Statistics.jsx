@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { linearGradientDef } from '@nivo/core'
 import { ResponsivePie } from '@nivo/pie'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,13 +16,13 @@ const Statistics = () => {
                         {
                         "id": "Complete",
                         "label": "Complete",
-                        "value": 60,
+                        "value": 67,
                         "color": "hsl(240, 70%, 50%)"
                         },
                         {
                         "id": "Incomplete",
                         "label": "Incomplete",
-                        "value": 40,
+                        "value": 33,
                         "color": "hsl(192, 57%, 17%)"
                         }
                     ]}
@@ -82,12 +82,13 @@ const Statistics = () => {
                     ]}
                     
                 />
+                <div className="percentage_complete">67%</div>
             </div>
             <div className='recents_container'>
                 <h1 id='stats_h1'>Recent</h1>
                 <div className='recents_grid'>
                     <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
-                        <FontAwesomeIcon size='2xl' icon={faFileLines} />
+                        <FontAwesomeIcon size='2xl' icon={faFileLines} style={{color: '#ff0000',}} />
                         <div className='icon_name'>
                             <p>Image_configuration.pdf</p>
                             <div className='img_group'>
@@ -101,7 +102,7 @@ const Statistics = () => {
                         </div>
                     </motion.button>
                     <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
-                        <FontAwesomeIcon size='2xl' icon={faFileLines} />
+                        <FontAwesomeIcon size='2xl' icon={faFileLines} style={{color: '#76a30c',}} />
                         <div className='icon_name'>
                             <p>Knowledge_article.docx</p>
                             <div className="img_group">
@@ -115,7 +116,7 @@ const Statistics = () => {
                         </div>
                     </motion.button>
                     <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
-                        <FontAwesomeIcon size='2xl' icon={faFileLines} />
+                        <FontAwesomeIcon size='2xl' icon={faFileLines} style={{color: '#d37a07',}} />
                         <div className='icon_name'>
                             <p>Data_protection_policy_23.pdf</p>
                             <div className="img_group">
@@ -129,7 +130,7 @@ const Statistics = () => {
                         </div>
                     </motion.button>
                     <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
-                        <FontAwesomeIcon size='2xl' icon={faFileLines} />
+                        <FontAwesomeIcon size='2xl' icon={faFileLines} style={{color: '#008cff',}} />
                         <div className='icon_name'>
                             <p>DUX776_2324.xlsx</p>
                             <div className="img_group">
