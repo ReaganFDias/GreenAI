@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { linearGradientDef } from "@nivo/core";
-import { ResponsivePie } from "@nivo/pie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFileLines,
@@ -9,8 +7,12 @@ import {
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import { Summary } from "../../components";
+import {
+  Summary,
+  PercentageComplete
+} from "../../components";
 import ImageConfigPDF from '../../assets/Image_configuration.pdf'
+import DUCSV from '../../assets/DUX776_2324.csv'
 import "./Statistics.css";
 
 const Statistics = () => {
@@ -35,67 +37,7 @@ const Statistics = () => {
       ) : null}
       <div className="stats_container">
         <h1 id="stats_h1">Complete</h1>
-        <ResponsivePie
-          data={[
-            {
-              id: "Complete",
-              label: "Complete",
-              value: 67,
-              color: "hsl(240, 70%, 50%)",
-            },
-            {
-              id: "Incomplete",
-              label: "Incomplete",
-              value: 33,
-              color: "hsl(192, 57%, 17%)",
-            },
-          ]}
-          margin={{ top: 50, right: 60, bottom: 0, left: 60 }}
-          innerRadius={0.6}
-          padAngle={0.7}
-          cornerRadius={3}
-          activeOuterRadiusOffset={8}
-          borderWidth={0}
-          borderColor={{
-            from: "color",
-            modifiers: [["darker", 0.2]],
-          }}
-          enableArcLabels={false}
-          enableArcLinkLabels={false}
-          arcLinkLabelsSkipAngle={10}
-          arcLinkLabelsTextColor="#333333"
-          arcLinkLabelsThickness={2}
-          arcLinkLabelsColor={{ from: "color" }}
-          arcLabelsSkipAngle={10}
-          arcLabelsTextColor={{
-            from: "color",
-            modifiers: [["darker", 2]],
-          }}
-          defs={[
-            linearGradientDef("gradientA", [
-              { offset: 0, color: "rgb(0,255,198)" },
-              { offset: 100, color: "#9acd32" },
-            ]),
-            linearGradientDef("gradientB", [
-              { offset: 0, color: "#133b45" },
-              { offset: 100, color: "#133b45" },
-            ]),
-
-            {
-              id: "gradientC",
-              type: "linearGradient",
-              colors: [
-                { offset: 0, color: "#008000" },
-                { offset: 100, color: "#9acd32" },
-              ],
-            },
-          ]}
-          fill={[
-            { match: { id: "Complete" }, id: "gradientA" },
-            { match: { id: "Incomplete" }, id: "gradientB" },
-          ]}
-        />
-        <div className="percentage_complete">67%</div>
+        <PercentageComplete complete={67}/>
       </div>
       <div className="recents_container">
         <h1 id="stats_h1">Recent</h1>
@@ -113,6 +55,8 @@ const Statistics = () => {
                 department: "Tech@Lilly",
                 user1: "Reagan",
                 user2: "Nojus",
+                user1_status: <FontAwesomeIcon size="lg" icon={faXmark} style={{ color: "#ff1a1a" }} />,
+                user2_status: <FontAwesomeIcon size="lg" icon={faCheck} style={{ color: "#00ff00" }} />
               });
             }}
             className="file_metadata"
@@ -219,10 +163,11 @@ const Statistics = () => {
             onClick={() => {
                 toggleSummary();
                 updateDetails({
-                  name: "DUX776_2324.xlsx",
+                  name: "DUX776_2324.csv",
+                  local_Src: DUCSV,
                   size: "1.8 GB",
                   date: "Jan 13, 2021",
-                  type: "application/xlsx",
+                  type: "text/csv",
                   department: "R&D",
                   user1: "Reagan",
                   user2: "Maisie",

@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { PercentageComplete } from '../../components'
 import './Summary.css'
 
 const Summary = (props) => {
@@ -18,21 +20,38 @@ const Summary = (props) => {
                 </div>
                 <div className="metadata_container">
                     <h2>Information</h2>
-                    <p>Name: {props.data.name}</p>
-                    <p>Size: {props.data.size}</p>
-                    <p>Date created: {props.data.date}</p>
-                    <p>Type: {props.data.type}</p>
-                    <p>Department: {props.data.department}</p>
-                    <div>
-                        <div>
-                            <div></div>
+                    <p><b>Name:</b> {props.data.name}</p>
+                    <p><b>Size:</b> {props.data.size}</p>
+                    <p><b>Date created:</b> {props.data.date}</p>
+                    <p><b>Type:</b> {props.data.type}</p>
+                    <p><b>Department:</b> {props.data.department}</p>
+                    <div className='users_container'>
+                        <div className="user_wrapper">
+                            <div className='user'>{props.data.user1[0]}</div>
                             <p>{props.data.user1}</p>
-                            <div></div>
+                            <div className="user_status">{props.data.user1_status}</div>
+                        </div>
+                        <div className="user_wrapper">
+                            <div className='user'>{props.data.user2[0]}</div>
                             <p>{props.data.user2}</p>
+                            <div className="user_status">{props.data.user2_status}</div>
                         </div>
                     </div>
-                    <div>Percentage</div>
-                    <motion.button>See more details...</motion.button>
+                    <div className="stats_container">
+                        <h1 id="stats_h1">Complete</h1>
+                        <PercentageComplete difference={4} complete={71}/>
+                    </div>
+                    <div className='details_btn'>
+                        <Link to="folders">
+                        <motion.button
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 1 }}
+                            className='sidebar_btn'
+                            >
+                            See more details...
+                        </motion.button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

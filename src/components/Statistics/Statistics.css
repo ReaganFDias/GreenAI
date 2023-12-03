@@ -81,11 +81,3 @@
 .icon_name > p, .date_size > p {
     font-size: 0.8vw;
 }
-
-.percentage_complete {
-    position: absolute;
-    color: white;
-    bottom: 35%;
-    left: 40%;
-    font-size: 4vh;
-}
