@@ -9,28 +9,15 @@ import ImageConfigPDF from '../../assets/Image_configuration.pdf'
 import './Statistics.css'
 
 const Statistics = () => {
-    const [toggle, setToggle] = useState(false);
+    const [currentToggle, setToggle] = useState(false)
 
-    toggleSummary = () => {
-        this.setState({
-            seen: !this.state.seen,
-        });
+    const toggleSummary = () => {
+        setToggle(current => !current);
     };
 
-    updateDetails = (fn, src, sz, typ, dpt) => {
-        this.setState({
-            name: fn,
-            local_src: src,
-            size: sz,
-            type: typ,
-            department: dpt
-        });
-    };
-
-    render() {
     return (
         <div className='bottom_container'>
-            {this.state.seen ? <Summary toggle={this.toggleSummary} name={this.state.name} local_src={this.state.local_src} size={this.state.size} department={this.state.department} /> : null}
+            {currentToggle ? <Summary toggle={setToggle} /> : null}
             <div className='stats_container'>
                 <h1 id='stats_h1'>Complete</h1>
                 <ResponsivePie
@@ -111,7 +98,7 @@ const Statistics = () => {
                 <div className='recents_grid'>
                     <motion.button
                         whileHover={{ scale: 1.02 }}
-                        onClick={this.toggleSummary}
+                        onClick={toggleSummary}
                         className='file_metadata'>
                         <FontAwesomeIcon size='2xl' icon={faFileLines} style={{color: '#ff0000',}} />
                         <div className='icon_name'>
@@ -172,7 +159,6 @@ const Statistics = () => {
             </div>
         </div>
     )
-}
 }
 
 export default Statistics
