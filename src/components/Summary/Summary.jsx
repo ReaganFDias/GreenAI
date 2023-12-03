@@ -14,24 +14,24 @@ const Summary = (props) => {
                     <span className="close" onClick={handleClick}>&times;</span>
                 </div>
                 <div className="summary_container">
-                    <embed src='' type="application/pdf" />
+                    <embed src={props.data.local_src} type={props.data.type} />
                 </div>
                 <div className="metadata_container">
                     <h2>Information</h2>
-                    <p>Name: </p>
-                    <p>Size: </p>
-                    <p>Date created: </p>
-                    <p>Type: </p>
-                    <p>Department: </p>
+                    <p>Name: {props.data.name}</p>
+                    <p>Size: {props.data.size}</p>
+                    <p>Date created: {props.data.date}</p>
+                    <p>Type: {props.data.type}</p>
+                    <p>Department: {props.data.department}</p>
                     <div>
                         <div>
                             <div></div>
-                            <p>Reagan</p>
+                            <p>{props.data.user1}</p>
                             <div></div>
-                            <p>Nojus</p>
+                            <p>{props.data.user2}</p>
                         </div>
                     </div>
-                    <></>
+                    <div>Percentage</div>
                     <motion.button>See more details...</motion.button>
                 </div>
             </div>
