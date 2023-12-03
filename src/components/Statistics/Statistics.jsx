@@ -4,11 +4,33 @@ import { ResponsivePie } from '@nivo/pie'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileLines, faCheck, faXmark, faEllipsis } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion'
+import { Summary } from '../../components'
+import ImageConfigPDF from '../../assets/Image_configuration.pdf'
 import './Statistics.css'
 
 const Statistics = () => {
+    const [toggle, setToggle] = useState(false);
+
+    toggleSummary = () => {
+        this.setState({
+            seen: !this.state.seen,
+        });
+    };
+
+    updateDetails = (fn, src, sz, typ, dpt) => {
+        this.setState({
+            name: fn,
+            local_src: src,
+            size: sz,
+            type: typ,
+            department: dpt
+        });
+    };
+
+    render() {
     return (
         <div className='bottom_container'>
+            {this.state.seen ? <Summary toggle={this.toggleSummary} name={this.state.name} local_src={this.state.local_src} size={this.state.size} department={this.state.department} /> : null}
             <div className='stats_container'>
                 <h1 id='stats_h1'>Complete</h1>
                 <ResponsivePie
@@ -87,7 +109,10 @@ const Statistics = () => {
             <div className='recents_container'>
                 <h1 id='stats_h1'>Recent</h1>
                 <div className='recents_grid'>
-                    <motion.button whileHover={{ scale: 1.02 }} className='file_metadata'>
+                    <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        onClick={this.toggleSummary}
+                        className='file_metadata'>
                         <FontAwesomeIcon size='2xl' icon={faFileLines} style={{color: '#ff0000',}} />
                         <div className='icon_name'>
                             <p>Image_configuration.pdf</p>
@@ -147,6 +172,7 @@ const Statistics = () => {
             </div>
         </div>
     )
+}
 }
 
 export default Statistics
