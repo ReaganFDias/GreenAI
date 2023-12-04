@@ -19,7 +19,7 @@ const Summary = (props) => {
                     <embed src={props.data.local_src} type={props.data.type} />
                 </div>
                 <div className="metadata_container">
-                    <h2>Information</h2>
+                    <h2>Information</h2> 
                     <p><b>Name:</b> {props.data.name}</p>
                     <p><b>Size:</b> {props.data.size}</p>
                     <p><b>Date created:</b> {props.data.date}</p>

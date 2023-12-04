@@ -1,0 +1,81 @@
+.workspace_management {
+    background-color: rgb(18,73,83);
+    height: 100vh;
+    width: 100vw;
+    border-radius: 40px 0 0 40px;
+    padding: 0 5vw;
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+  }
+
+.workspace_management > h1 {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 6vh;
+  text-decoration: underline 2px;
+  text-underline-offset: 3vh;
+}
+
+.file_list {
+  background-color: rgb(13,48,58);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 93%;
+  border-radius: 50px;
+  padding-top: 3vh;
+}
+
+.file_metadata {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 4vw;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.file_metadata:hover {
+  background-color: rgb(18,73,83);
+}
+
+.icon_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.icon_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.img_group {
+  display: flex;
+}
+
+.img_group > * {
+  width: 1.3vw;
+  height: 1.3vw;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0 0.2vw;
+  padding: 0.5vh;
+}
+
+.date_size {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.icon_name > p, .date_size > p {
+  font-size: 0.8vw;
+}

@@ -3,7 +3,7 @@ import './Settings.css'
 
 const Settings = () => {
     return (
-        <div>
+        <div className='workspace'>
             <h1>Settings</h1>
         </div>
     )

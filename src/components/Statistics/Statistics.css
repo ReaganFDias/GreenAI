@@ -40,6 +40,7 @@
 
 .file_metadata:hover {
     background-color: rgb(18,73,83);
+    cursor: pointer;
 }
 
 .recents_grid {

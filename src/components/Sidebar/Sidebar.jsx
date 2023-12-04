@@ -33,13 +33,13 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="folders">
+                    <Link to="management">
                     <motion.button
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 1 }}
                         className='sidebar_btn'
                     ><FontAwesomeIcon className='icon' icon={faFolder} />
-                        Folders
+                        Management
                     </motion.button>
                     </Link>
                 </li>

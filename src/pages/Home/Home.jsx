@@ -8,7 +8,7 @@ import {
 
 const Home = () => {
     return (
-        <div className="workspace">
+        <div className="workspace_home">
             <OverviewBar />
             <Folders />
             <Statistics />
