@@ -42,7 +42,7 @@ const Summary = (props) => {
                         <PercentageComplete difference={4} complete={71}/>
                     </div>
                     <div className='details_btn'>
-                        <Link to="folders">
+                        <Link to={'management/' + props.data.name}>
                         <motion.button
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 1 }}

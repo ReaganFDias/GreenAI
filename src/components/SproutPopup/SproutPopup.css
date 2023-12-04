@@ -1,0 +1,26 @@
+.modal_sprout {
+    display: flex;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 1vw;
+    width: 1vw;
+}
+
+.modal_content_sprout {
+    border-radius: 40px;
+    position: absolute;
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+.modal_content > img {
+    height: 10%;
+    width: 10%;
+}

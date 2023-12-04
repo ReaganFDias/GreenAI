@@ -8,6 +8,7 @@ import {
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
 import ImageConfigPDF from './assets/Image_configuration.pdf'
+import DUCSV from './assets/DUX776_2324.csv'
 import {
   Sidebar,
   FileTemplate
@@ -38,9 +39,34 @@ function App() {
                 user1_status: <FontAwesomeIcon size="lg" icon={faXmark} style={{ color: "#ff1a1a" }} />,
                 user2_status: <FontAwesomeIcon size="lg" icon={faCheck} style={{ color: "#00ff00" }} />
               }} />}/>
-          <Route path='Knowledge_article.docx' />
-          <Route path='Data_protection_policy_23.pdf' />
-          <Route path='DUX776_2324.xlsx' />
+          <Route path='Knowledge_article.docx' element={<FileTemplate data={{
+                  name: "Knowledge_article.docx",
+                  size: "3 MB",
+                  date: "Aug 15, 2006",
+                  type: "application/docx",
+                  department: "Environmental",
+                  user1: "Khushi",
+                  user2: "Elizabeth",
+                }} />}/>
+          <Route path='Data_protection_policy_23.pdf' element={<FileTemplate data={{
+                  name: "Data_protection_policy_23.pdf",
+                  size: "1.6 GB",
+                  date: "Sep 01, 2023",
+                  type: "application/pdf",
+                  department: "Legal",
+                  user1: "Maisie",
+                  user2: "Michelle",
+                }} />}/>
+          <Route path='DUX776_2324.xlsx' element={<FileTemplate data={{
+                  name: "DUX776_2324.csv",
+                  local_Src: DUCSV,
+                  size: "1.8 GB",
+                  date: "Jan 13, 2021",
+                  type: "text/csv",
+                  department: "R&D",
+                  user1: "Reagan",
+                  user2: "Maisie",
+                }} />}/>
         </Route>
         <Route path='settings' element={<Settings />} />
       </Routes>

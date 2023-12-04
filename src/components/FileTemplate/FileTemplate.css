@@ -1,18 +1,90 @@
 .workspace_ftemp {
-    background-color: rgb(18,73,83);
-    height: 100vh;
-    width: 100vw;
-    border-radius: 40px 0 0 40px;
-    padding: 0 5vw;
-    display: flex;
-  }
+  background-color: rgb(18,73,83);
+  height: 100vh;
+  width: 100vw;
+  border-radius: 40px 0 0 40px;
+  padding: 4vh 5vw;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+}
 
-  .display {
-    width: 100%;
-    background-color: red;
-  }
+.display {
+  width: 100%;
+  padding-right: 2vw;
+}
 
-  .file_details {
-    width: 100%;
-    background-color: aqua;
-  }
+.file_details {
+  padding: 7vh 1.5vw;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: rgb(13,48,58);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metadata {
+  color: white;
+}
+
+.metadata > h2 {
+  text-decoration: underline;
+  padding-bottom: 1vh;
+}
+
+.metadata > p {
+  padding: 0.2vh 0;
+}
+
+.user_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_wrapper > p {
+  color: white;
+}
+
+.user {
+  color: white;
+}
+
+.btn_wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn_status {
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  padding: 1vh;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.sprout_ai {
+  display: flex;
+  color: white;
+  padding: 2vh 1.5vw;
+  border: 1px solid white;
+  border-radius: 40px;
+}
+
+.sprout_ai > h3 {
+  padding-bottom: 1vh;
+}
+
+.reasons {
+  padding: 0 1vw;
+}
+
+.reasons > h3 {
+  text-decoration: underline;
+  padding-bottom: 1vh;
+}
