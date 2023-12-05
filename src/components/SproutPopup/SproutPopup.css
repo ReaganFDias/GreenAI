@@ -1,26 +1,39 @@
-.modal_sprout {
+.sprout_container {
     display: flex;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    height: 1vw;
-    width: 1vw;
-}
-
-.modal_content_sprout {
-    border-radius: 40px;
-    position: absolute;
-    background-color: blue;
-    height: 100%;
     width: 100%;
-    right: 0;
-    bottom: 0;
+    height: 100%;
+    position: relative;
 }
 
-.modal_content > img {
-    height: 10%;
-    width: 10%;
+.emission_statement {
+    position: absolute;
+    top: 3vh;
+}
+
+.emission_statement > p {
+    color: black;
+    background-color: white;
+    padding: 1vh 1vh;
+    border-radius: 40px;
+    position: relative;
+}
+
+.emission_statement > p::after {
+    content: '';
+    position: absolute;
+    left: 10vh;
+    bottom: -3vh;
+    width: 0;
+    height: 0;
+    border-top: 30px solid white;
+    border-left: 30px solid transparent;
+}
+
+.sprout_container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }

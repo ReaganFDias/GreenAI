@@ -11,6 +11,16 @@ import { SproutPopup } from '../../components'
 import "./FileTemplate.css";
 
 const FileTemplate = (props) => {
+  const [popup, setPopup] = useState(false)
+
+  const sproutPopup = (display) => {
+    if (display === 'yes' && popup === false) {
+      setPopup((current) => !current);
+    } else if (display === 'no' && popup == true) {
+      setPopup((current) => !current);
+    }
+  }
+
   return (
     <div className="workspace_ftemp">
       <div className="display">
@@ -32,9 +42,9 @@ const FileTemplate = (props) => {
                 <div className="user_status">{props.data.user1_status}</div>
             </div>
             <div className="btn_wrapper">
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }}><FontAwesomeIcon size="2xl" icon={faXmark} style={{ color: "#ff1a1a" }} /></motion.button>
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }}><FontAwesomeIcon size="2xl" icon={faEllipsis} style={{ color: "#ffffff" }} /></motion.button>
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }}><FontAwesomeIcon size="2xl" icon={faCheck} style={{ color: "#00ff00" }} /></motion.button>
+              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faXmark} style={{ color: "#ff1a1a" }} /></motion.button>
+              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faEllipsis} style={{ color: "#ffffff" }} /></motion.button>
+              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('yes')}><FontAwesomeIcon size="2xl" icon={faCheck} style={{ color: "#00ff00" }} /></motion.button>
             </div>
         </div>
         <div className="sprout_ai">
@@ -57,6 +67,7 @@ const FileTemplate = (props) => {
             </ul>
           </div>
         </div>
+        {popup ? <SproutPopup /> : null}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faFolder, faGear, faLeaf } from "@fortawesome/free-solid-svg-icons";
 import './Sidebar.css'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
         <div className="sidebar">
             <div>

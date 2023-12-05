@@ -4,15 +4,17 @@ import sprout from '../../assets/sprout.png'
 import "./SproutPopup.css";
 
 const SproutPopup = (props) => {
-    const handleClick = () => {
-        props.toggle()
-    }
+    // const handleClick = () => {
+    //    props.toggle()
+    // }
 
   return (
-    <div className="modal_sprout">
-        <div className="modal_content_sprout">
-            <img src={sprout} alt="" />
-        </div>
+    <div className="sprout_container">
+      <div className="emission_statement">
+        <p>Congrats! You reduced carbon emissions by 0.5%</p>
+      </div>
+      
+      <img src={sprout} alt="" />
     </div>
   );
 };

@@ -1,11 +1,8 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faFileLines,
   faCheck,
   faXmark,
-  faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
 import ImageConfigPDF from './assets/Image_configuration.pdf'
 import DUCSV from './assets/DUX776_2324.csv'
@@ -18,11 +15,12 @@ import {
   FoldersManagement,
   Settings
 } from './pages';
+import './App.css';
 
 function App() {
   return (
     <div className="main">
-      <Sidebar />
+      <Sidebar/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='management'>
