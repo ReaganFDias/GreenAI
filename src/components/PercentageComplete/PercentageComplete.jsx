@@ -11,7 +11,7 @@ const PercentageComplete = (props) => {
             {
                 id: "Complete",
                 label: "Complete",
-                value: 100,
+                value: 67,
                 color: "hsl(240, 70%, 50%)",
             },
             {

@@ -26,19 +26,19 @@ const Summary = (props) => {
                     <p><b>Date created:</b> {props.data.date}</p>
                     <p><b>Type:</b> {props.data.type}</p>
                     <p><b>Department:</b> {props.data.department}</p>
-                    <div className='users_container'>
-                        <div className="user_wrapper">
-                            <div className='user'>{props.data.user1[0]}</div>
+                    <div className='users_container_summary'>
+                        <div className="user_wrapper_summary">
+                            <div className='user_summary'>{props.data.user1[0]}</div>
                             <p>{props.data.user1}</p>
-                            <div className="user_status">{props.data.user1_status}</div>
+                            <div className="user_status_summary">{props.data.user1_status}</div>
                         </div>
-                        <div className="user_wrapper">
-                            <div className='user'>{props.data.user2[0]}</div>
+                        <div className="user_wrapper_summary">
+                            <div className='user_summary'>{props.data.user2[0]}</div>
                             <p>{props.data.user2}</p>
-                            <div className="user_status">{props.data.user2_status}</div>
+                            <div className="user_status_summary">{props.data.user2_status}</div>
                         </div>
                     </div>
-                    <div className="stats_container">
+                    <div className="stats_container_summary">
                         <h1 id="stats_h1">Complete</h1>
                         <PercentageComplete difference={4} complete={71} />
                     </div>

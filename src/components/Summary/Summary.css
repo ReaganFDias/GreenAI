@@ -78,13 +78,13 @@ embed {
     padding: 0.4vh 0;
 }
 
-.users_container {
+.users_container_summary {
     display: flex;
     justify-content: space-evenly;
     padding: 3vh 0;
 }
 
-.user_wrapper {
+.user_wrapper_summary {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +93,7 @@ embed {
     height: 100%;
 }
 
-.user {
+.user_summary {
     display: flex;
     border: 1px solid white;
     border-radius: 50%;
@@ -103,7 +103,7 @@ embed {
     justify-content: center;
 }
 
-.user_status {
+.user_status_summary {
     width: 25px;
     height: 25px;
     border: 1px solid white;
@@ -117,7 +117,7 @@ embed {
     background-color: rgb(13,48,58);
 }
 
-.stats_container {
+.stats_container_summary {
     width: 20vw;
     height: 20vw;
     border-radius: 50px;
@@ -137,6 +137,21 @@ embed {
     border: 1px solid white;
     border-radius: 50px;
 }
+
+.summary_btn {
+    width: 100%;
+    color: white;
+    background: transparent;
+    border-radius: 30px;
+    padding: 1.4vh 0.8vw;
+    font-size: 1.2vw;
+    border: none;
+  }
+  
+  .summary_btn:hover {
+    background: rgb(0,108,223);
+    background: radial-gradient(circle, rgba(0,108,223,1) 0%, rgba(0,125,212,1) 15%, rgba(1,151,198,1) 30%, rgba(0,180,176,1) 50%, rgba(0,197,184,1) 70%, rgba(0,182,186,1) 85%, rgba(0,212,255,1) 100%);
+  }
 
 @media screen and (max-width: 500px) {
     .modal_content {
@@ -173,6 +188,7 @@ embed {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden;
     }
 
     .scroll_up_bar {
@@ -187,11 +203,11 @@ embed {
         text-align: center;
     }
 
-    .users_container {
+    .users_container_summary {
         width: 100%;
     }
 
-    .stats_container {
+    .stats_container_summary {
         width: 300px;
         height: 300px;
     }
