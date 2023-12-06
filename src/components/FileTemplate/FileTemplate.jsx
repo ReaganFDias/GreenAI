@@ -6,18 +6,27 @@ import {
   faXmark,
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
-import sprout from '../../assets/mascot.jpg'
 import { SproutPopup } from '../../components'
 import "./FileTemplate.css";
 
 const FileTemplate = (props) => {
   const [popup, setPopup] = useState(false)
+  const [currentStatus, setStatus] = useState(props.data.user1_status)
 
   const sproutPopup = (display) => {
     if (display === 'yes' && popup === false) {
       setPopup((current) => !current);
-    } else if (display === 'no' && popup == true) {
+      setStatus(<FontAwesomeIcon icon={faXmark} style={{ color: "#ff1a1a" }} />);
+    } else if (display === 'no' && popup === true) {
       setPopup((current) => !current);
+      setStatus(<FontAwesomeIcon icon={faCheck} style={{ color: "#00ff00" }} />);
+    } else if (display === 'no' && popup === false) {
+      setStatus(<FontAwesomeIcon icon={faCheck} style={{ color: "#00ff00" }} />);
+    } else if (display === 'undecided' && popup === true) {
+      setPopup((current) => !current);
+      setStatus(<FontAwesomeIcon icon={faEllipsis} style={{ color: "#ffffff" }} />);
+    } else if (display === 'undecided' && popup === false) {
+      setStatus(<FontAwesomeIcon icon={faEllipsis} style={{ color: "#ffffff" }} />);
     }
   }
 
@@ -39,12 +48,12 @@ const FileTemplate = (props) => {
             <div className="user_wrapper">
                 <div className='user'>{props.data.user1[0]}</div>
                 <p>{props.data.user1}</p>
-                <div className="user_status">{props.data.user1_status}</div>
+                <div className="user_status">{currentStatus}</div>
             </div>
             <div className="btn_wrapper">
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faXmark} style={{ color: "#ff1a1a" }} /></motion.button>
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faEllipsis} style={{ color: "#ffffff" }} /></motion.button>
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('yes')}><FontAwesomeIcon size="2xl" icon={faCheck} style={{ color: "#00ff00" }} /></motion.button>
+              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('yes')}><FontAwesomeIcon size="2xl" icon={faXmark} style={{ color: "#ff1a1a" }} /></motion.button>
+              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('undecided')}><FontAwesomeIcon size="2xl" icon={faEllipsis} style={{ color: "#ffffff" }} /></motion.button>
+              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faCheck} style={{ color: "#00ff00" }} /></motion.button>
             </div>
         </div>
         <div className="sprout_ai">

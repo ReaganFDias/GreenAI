@@ -99,6 +99,8 @@ const Statistics = () => {
                   department: "Environmental",
                   user1: "Khushi",
                   user2: "Elizabeth",
+                  user1_status: <FontAwesomeIcon icon={faEllipsis} />,
+                  user2_status: <FontAwesomeIcon icon={faEllipsis} />
                 });
               }}
             className="file_metadata_stats">
@@ -132,6 +134,8 @@ const Statistics = () => {
                   department: "Legal",
                   user1: "Maisie",
                   user2: "Michelle",
+                  user1_status: <FontAwesomeIcon size="lg" icon={faCheck} style={{ color: "#00ff00" }} />,
+                  user2_status: <FontAwesomeIcon size="lg" icon={faCheck} style={{ color: "#00ff00" }} />
                 });
               }}
             className="file_metadata_stats">
@@ -174,6 +178,8 @@ const Statistics = () => {
                   department: "R&D",
                   user1: "Reagan",
                   user2: "Maisie",
+                  user1_status: <FontAwesomeIcon icon={faEllipsis} />,
+                  user2_status: <FontAwesomeIcon icon={faXmark} style={{ color: "#ff1a1a" }} />
                 });
               }}
             className="file_metadata_stats">

@@ -61,6 +61,8 @@ embed {
     color: white;
     padding: 2vh 1vw;
     overflow-y: scroll;
+    background-color: rgb(22, 68, 80);
+    border-radius: 0 0 40px 0;
 }
 
 .metadata_container > h2 {
@@ -84,15 +86,17 @@ embed {
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 100%;
 }
 
 .user {
+    display: flex;
     border: 1px solid white;
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    font-size: 8vh;
-    text-align: center;
+    height: 70px;
+    width: 70px;
+    font-size: 3.2em;
+    justify-content: center;
 }
 
 .user_status {
@@ -110,16 +114,22 @@ embed {
 }
 
 .stats_container {
-    background-color: #133b45;
     width: 20vw;
     height: 20vw;
     border-radius: 50px;
+    margin: 0 auto;
     position: relative;
+    background-color: rgb(13,48,58);
+}
+
+#stats_h1 {
+    position: absolute;
+    margin: 3vh 0 0 2vw;
 }
 
 .details_btn {
     width: 70%;
-    margin: 1vh auto;
+    margin: 2vh auto;
     border: 1px solid white;
     border-radius: 50px;
 }

@@ -39,7 +39,7 @@ const Summary = (props) => {
                     </div>
                     <div className="stats_container">
                         <h1 id="stats_h1">Complete</h1>
-                        <PercentageComplete difference={4} complete={71}/>
+                        <PercentageComplete difference={4} complete={71} />
                     </div>
                     <div className='details_btn'>
                         <Link to={'management/' + props.data.name}>
