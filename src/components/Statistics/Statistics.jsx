@@ -35,12 +35,12 @@ const Statistics = () => {
       {currentToggle ? (
         <Summary toggle={setToggle} data={currentDetails} />
       ) : null}
-      <div className="stats_container">
-        <h1 id="stats_h1">Complete</h1>
+      <div className="stats_container_main">
+        <h1 className="stats_h1_main">Complete</h1>
         <PercentageComplete complete={67}/>
       </div>
       <div className="recents_container">
-        <h1 id="stats_h1">Recent</h1>
+        <h1 className="recents_h1">Recent</h1>
         <div className="recents_grid">
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -59,16 +59,17 @@ const Statistics = () => {
                 user2_status: <FontAwesomeIcon size="lg" icon={faCheck} style={{ color: "#00ff00" }} />
               });
             }}
-            className="file_metadata"
+            className="file_metadata_stats"
           >
             <FontAwesomeIcon
               size="2xl"
               icon={faFileLines}
               style={{ color: "#ff0000" }}
+              className="file_icon"
             />
-            <div className="icon_name">
+            <div className="icon_name_stats">
               <p>Image_configuration.pdf</p>
-              <div className="img_group">
+              <div className="img_group_stats">
                 <FontAwesomeIcon
                   size="2xl"
                   icon={faXmark}
@@ -81,7 +82,7 @@ const Statistics = () => {
                 />
               </div>
             </div>
-            <div className="date_size">
+            <div className="date_size_stats">
               <p>Nov 28, 2023</p>
               <p>2.3 GB</p>
             </div>
@@ -100,20 +101,21 @@ const Statistics = () => {
                   user2: "Elizabeth",
                 });
               }}
-            className="file_metadata">
+            className="file_metadata_stats">
             <FontAwesomeIcon
               size="2xl"
               icon={faFileLines}
               style={{ color: "#76a30c" }}
+              className="file_icon"
             />
-            <div className="icon_name">
+            <div className="icon_name_stats">
               <p>Knowledge_article.docx</p>
-              <div className="img_group">
+              <div className="img_group_stats">
                 <FontAwesomeIcon icon={faEllipsis} />
                 <FontAwesomeIcon icon={faEllipsis} />
               </div>
             </div>
-            <div className="date_size">
+            <div className="date_size_stats">
               <p>Aug 15, 2006</p>
               <p>3 MB</p>
             </div>
@@ -132,15 +134,16 @@ const Statistics = () => {
                   user2: "Michelle",
                 });
               }}
-            className="file_metadata">
+            className="file_metadata_stats">
             <FontAwesomeIcon
               size="2xl"
               icon={faFileLines}
               style={{ color: "#d37a07" }}
+              className="file_icon"
             />
-            <div className="icon_name">
+            <div className="icon_name_stats">
               <p>Data_protection_policy_23.pdf</p>
-              <div className="img_group">
+              <div className="img_group_stats">
                 <FontAwesomeIcon
                   size="2xl"
                   icon={faCheck}
@@ -153,7 +156,7 @@ const Statistics = () => {
                 />
               </div>
             </div>
-            <div className="date_size">
+            <div className="date_size_stats">
               <p>Sep 01, 2023</p>
               <p>1.6 GB</p>
             </div>
@@ -173,20 +176,21 @@ const Statistics = () => {
                   user2: "Maisie",
                 });
               }}
-            className="file_metadata">
+            className="file_metadata_stats">
             <FontAwesomeIcon
               size="2xl"
               icon={faFileLines}
               style={{ color: "#008cff" }}
+              className="file_icon"
             />
-            <div className="icon_name">
+            <div className="icon_name_stats">
               <p>DUX776_2324.xlsx</p>
-              <div className="img_group">
+              <div className="img_group_stats">
                 <FontAwesomeIcon icon={faEllipsis} />
                 <FontAwesomeIcon icon={faXmark} style={{ color: "#ff1a1a" }} />
               </div>
             </div>
-            <div className="date_size">
+            <div className="date_size_stats">
               <p>Jan 13, 2021</p>
               <p>1.8 GB</p>
             </div>

@@ -23,6 +23,7 @@
 
 #swiper_container {
     height: 100%;
+    width: 100%;
 }
 
 .swiper {
@@ -89,3 +90,44 @@
   .mascot_folders {
     display: flex;
   }
+
+@media screen and (max-width: 500px) {
+  .folders_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subtitle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .desc_container {
+    padding: 2vh 0 5vh 0;
+  }
+
+  .desc {
+    font-size: 4vw;
+  }
+
+  .swiper {
+    width: 40vw;
+  }
+
+  #swiper_container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #fff;
+  }
+}

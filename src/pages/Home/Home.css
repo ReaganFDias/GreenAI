@@ -6,3 +6,12 @@
     display: grid;
     grid-template-rows: 20vh 35vh 45vh;
   }
+
+@media screen and (max-width: 500px) {
+  .workspace_home {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border-radius: 0;
+  }
+}

@@ -15,3 +15,10 @@ body {
   height: 100vh;
   display: flex;
 }
+
+@media screen and (max-width: 500px) {
+  .main {
+    width: 100vw;
+    height: 100vh;
+  }
+}

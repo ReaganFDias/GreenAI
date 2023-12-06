@@ -36,3 +36,24 @@ input[type='text']:focus {
 input::placeholder {
     color: white;
 }
+
+@media screen and (max-width: 500px) {
+    .search_container {
+        width: 40vw;
+        height: 3.5vh;
+    }
+
+    .searchbar_ {
+        font-size: 2.5vw;
+    }
+
+    input[type='text'] {
+        padding-left: 14%;
+    }
+
+    .search_icon_ {
+        left: 1.5vw;
+        top: 0.8vh;
+        font-size: 3vw;
+    }
+}

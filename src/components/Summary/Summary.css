@@ -123,3 +123,24 @@ embed {
     border: 1px solid white;
     border-radius: 50px;
 }
+
+@media screen and (max-width: 500px) {
+    .modal_content {
+        background-color: rgb(19, 58, 68);
+        border-radius: 40px;
+        position: absolute;
+        width: 80%;
+        height: 90%;
+        display: grid;
+        grid-template-columns: 0.7fr 0.3fr;
+        grid-template-rows: 0.07fr 0.93fr;
+    }
+
+    .close_bar {
+        justify-content: center;
+    }
+
+    span {
+        font-size: 7vw;
+    }
+}
