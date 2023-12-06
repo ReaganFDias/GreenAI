@@ -14,7 +14,7 @@
 }
 
 .file_details {
-  padding: 7vh 1.5vw;
+  padding: 3vh 1.5vw;
   width: 100%;
   height: 100%;
   border-radius: 40px;
@@ -42,13 +42,20 @@
   padding: 0.2vh 0;
 }
 
+.users_container {
+  transform: scale(1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vh 0;
+}
+
 .user_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100%;
   color: white;
 }
 
@@ -78,10 +85,11 @@
 }
 
 .btn_wrapper {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 1vh 0;
 }
 
 .btn_status {
@@ -142,6 +150,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2vh;
   }
 
   .scroll_up_bar_main_file {
@@ -152,19 +161,18 @@
     margin-bottom: 5%;
   }
 
-  .users_container {
-    flex-direction: column;
-    margin-top: -10vh;
+  .user_wrapper {
+    transform: scale(1.4);
+    padding-bottom: 2vh;
   }
 
-  .user_wrapper {
-    transform: scale(2);
-    padding-bottom: 1.75vh;
+  .user_wrapper > p {
+    padding: 1vh 0;
   }
 
   .user_status {
-    right: 40%;
-    top: 48%;
+    right: 0;
+    top: 40%;
   }
 
   .btn_wrapper {
@@ -172,8 +180,7 @@
   }
 
   .btn_status {
-    width: 85px;
-    height: 85px;
+    transform: scale(1.2);
   }
 
   .sprout_ai {

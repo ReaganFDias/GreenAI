@@ -37,3 +37,9 @@
     height: 100%;
     object-fit: fill;
 }
+
+@media screen and (max-width: 500px) {
+    .emission_statement > p {
+        font-size: 0.9em;
+    }
+}
