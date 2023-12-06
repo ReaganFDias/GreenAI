@@ -37,6 +37,7 @@ const FileTemplate = (props) => {
       </div>
       <div className="file_details">
         <div className="metadata">
+          <div className="scroll_up_bar_main_file"></div>
           <h2>Information</h2>
             <p><b>Name:</b> {props.data.name}</p>
             <p><b>Size:</b> {props.data.size}</p>
@@ -45,16 +46,16 @@ const FileTemplate = (props) => {
             <p><b>Department:</b> {props.data.department}</p>
         </div>
         <div className='users_container'>
-            <div className="user_wrapper">
-                <div className='user'>{props.data.user1[0]}</div>
-                <p>{props.data.user1}</p>
-                <div className="user_status">{currentStatus}</div>
-            </div>
-            <div className="btn_wrapper">
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('yes')}><FontAwesomeIcon size="2xl" icon={faXmark} style={{ color: "#ff1a1a" }} /></motion.button>
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('undecided')}><FontAwesomeIcon size="2xl" icon={faEllipsis} style={{ color: "#ffffff" }} /></motion.button>
-              <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faCheck} style={{ color: "#00ff00" }} /></motion.button>
-            </div>
+          <div className="user_wrapper">
+              <div className='user'>{props.data.user1[0]}</div>
+              <p>{props.data.user1}</p>
+              <div className="user_status">{currentStatus}</div>
+          </div>
+          <div className="btn_wrapper">
+            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('yes')}><FontAwesomeIcon size="2xl" icon={faXmark} style={{ color: "#ff1a1a" }} /></motion.button>
+            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('undecided')}><FontAwesomeIcon size="2xl" icon={faEllipsis} style={{ color: "#ffffff" }} /></motion.button>
+            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faCheck} style={{ color: "#00ff00" }} /></motion.button>
+          </div>
         </div>
         <div className="sprout_ai">
           <div className='reasons'>

@@ -29,6 +29,10 @@
   color: white;
 }
 
+.scroll_up_bar_main_file {
+  display: none;
+}
+
 .metadata > h2 {
   text-decoration: underline;
   padding-bottom: 1vh;
@@ -36,12 +40,6 @@
 
 .metadata > p {
   padding: 0.2vh 0;
-}
-
-.user_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .user_wrapper > p {
@@ -88,4 +86,72 @@
 .reasons > h3 {
   text-decoration: underline;
   padding-bottom: 1vh;
+}
+
+@media screen and (max-width: 500px) {
+  .workspace_ftemp {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 0 0;
+    padding: 0;
+    position: relative;
+    width: 100vw;
+  }
+
+  .display {
+    padding-right: 0;
+  }
+
+  .file_details {
+    padding: 3vh 8vw;
+    border-radius: 40px 40px 0 0;
+    position: absolute;
+    bottom: -90%;
+  }
+
+  .metadata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll_up_bar_main_file {
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 5%;
+  }
+
+  .users_container {
+    flex-direction: column;
+  }
+
+  .user_wrapper {
+    transform: scale(2);
+    padding-bottom: 1.75vh;
+  }
+
+  .user_status {
+    right: 40%;
+    bottom: 4vh;
+  }
+
+  .btn_wrapper {
+    width: 100%;
+    padding-top: 10%;
+  }
+
+  .btn_status {
+    width: 85px;
+    height: 85px;
+  }
+
+  .sprout_ai {
+    padding: 2vh 5vw;
+  }
+
+  .reasons {
+    padding: 0 4vw;
+  }
 }

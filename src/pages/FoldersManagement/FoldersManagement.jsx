@@ -21,6 +21,7 @@ const FoldersManagement = () => {
                         className="file_metadata"
                     >
                         <FontAwesomeIcon
+                        className="file_icon"
                         size="2xl"
                         icon={faFileLines}
                         style={{ color: "#ff0000" }}
@@ -51,6 +52,7 @@ const FoldersManagement = () => {
                         whileHover={{ scale: 1.02 }}
                         className="file_metadata">
                         <FontAwesomeIcon
+                        className="file_icon"
                         size="2xl"
                         icon={faFileLines}
                         style={{ color: "#76a30c" }}
@@ -73,6 +75,7 @@ const FoldersManagement = () => {
                         whileHover={{ scale: 1.02 }}
                         className="file_metadata">
                         <FontAwesomeIcon
+                        className="file_icon"
                         size="2xl"
                         icon={faFileLines}
                         style={{ color: "#d37a07" }}
@@ -103,6 +106,7 @@ const FoldersManagement = () => {
                         whileHover={{ scale: 1.02 }}
                         className="file_metadata">
                         <FontAwesomeIcon
+                        className="file_icon"
                         size="2xl"
                         icon={faFileLines}
                         style={{ color: "#008cff" }}

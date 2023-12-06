@@ -19,6 +19,7 @@ const Summary = (props) => {
                     <embed src={props.data.local_src} type={props.data.type} />
                 </div>
                 <div className="metadata_container">
+                    <div className="scroll_up_bar"></div>
                     <h2>Information</h2> 
                     <p><b>Name:</b> {props.data.name}</p>
                     <p><b>Size:</b> {props.data.size}</p>
@@ -46,7 +47,7 @@ const Summary = (props) => {
                         <motion.button
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 1 }}
-                            className='sidebar_btn'
+                            className='summary_btn'
                             >
                             See more details...
                         </motion.button>

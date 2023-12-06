@@ -79,3 +79,62 @@
 .icon_name > p, .date_size > p {
   font-size: 0.8vw;
 }
+
+@media screen and (max-width: 500px) {
+  .workspace_management {
+    border-radius: 0 0 0 0;
+  }
+
+  .workspace_management > h1 {
+    font-size: 10vw;
+  }
+
+  .file_metadata {
+    display: grid;
+    grid-template-columns: 30fr 70fr;
+    grid-template-rows: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 5vw;
+  }
+
+  .file_icon {
+      grid-column: 1;
+      grid-row: 1 / 2;
+      font-size: 12vw;
+  }
+
+  .icon_name {
+      flex-direction: column;
+      width: 100%;
+      grid-column: 2;
+      grid-row: 1;
+      padding: 0.5vh 0;
+  }
+
+  .img_group {
+      width: 40%;
+      padding-top: 1vh;
+      justify-content: space-between;
+  }
+
+  .img_group > * {
+      width: 6vw;
+      height: 6vw;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin: 0 0.2vw;
+      padding: 0.5vh;
+  }
+
+  .date_size {
+      grid-column: 2;
+      grid-row: 2;
+      flex-direction: row;
+      width: 80%;
+  }
+
+  .icon_name > p, .date_size > p {
+      font-size: 4vw;
+  }
+}
