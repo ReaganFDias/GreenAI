@@ -122,6 +122,17 @@
 
 @media screen and (max-width: 500px) {
   .sidebar {
+    z-index: 5;
+    position: absolute;
+    width: 80vw;
     display: none;
+  }
+
+  .ai_name {
+    font-size: 13vw;
+  }
+
+  .ai_name_icon {
+    font-size: 13vw;
   }
 }
