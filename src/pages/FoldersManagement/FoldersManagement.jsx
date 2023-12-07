@@ -101,7 +101,7 @@ const FoldersManagement = () => {
                         </div>
                     </motion.button>
                 </Link>
-                <Link to='DUX776_2324.xlsx'>
+                <Link to='DUX776_2324.csv'>
                     <motion.button
                         whileHover={{ scale: 1.02 }}
                         className="file_metadata">
@@ -112,7 +112,7 @@ const FoldersManagement = () => {
                         style={{ color: "#008cff" }}
                         />
                         <div className="icon_name">
-                        <p>DUX776_2324.xlsx</p>
+                        <p>DUX776_2324.csv</p>
                         <div className="img_group">
                             <FontAwesomeIcon icon={faEllipsis} />
                             <FontAwesomeIcon icon={faXmark} style={{ color: "#ff1a1a" }} />

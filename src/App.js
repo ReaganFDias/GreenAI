@@ -6,6 +6,7 @@ import {
   faEllipsis
 } from "@fortawesome/free-solid-svg-icons";
 import ImageConfigPDF from './assets/Image_configuration.pdf'
+import Policy from './assets/Data_protection_policy_23.pdf'
 import DUCSV from './assets/DUX776_2324.csv'
 import {
   Sidebar,
@@ -16,12 +17,54 @@ import {
   FoldersManagement,
   Settings
 } from './pages';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+      setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+      window.addEventListener('resize', handleWindowSizeChange);
+      return () => {
+          window.removeEventListener('resize', handleWindowSizeChange);
+      }
+  }, []);
+
+  const isMobile = width <= 768;
+
+  const [visible, setVisible] = useState(false)
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+
+  // the required distance between touchStart and touchEnd to be detected as a swipe
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e) => {
+      setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+      setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
+
+  const onTouchEnd = () => {
+      if (!touchStart || !touchEnd) return
+      const distance = touchStart - touchEnd
+      const isLeftSwipe = distance > minSwipeDistance
+      const isRightSwipe = distance < -minSwipeDistance
+      if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
+      if (isRightSwipe) {
+          setVisible(true)
+      } else {
+        setVisible(false)
+    }
+  }
+
   return (
-    <div className="main">
-      <Sidebar/>
+    <div className="main" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
+      {!isMobile || (visible && isMobile) ? <Sidebar /> : null}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='management'>
@@ -51,6 +94,7 @@ function App() {
                 }} />}/>
           <Route path='Data_protection_policy_23.pdf' element={<FileTemplate data={{
                   name: "Data_protection_policy_23.pdf",
+                  local_src: Policy,
                   size: "1.6 GB",
                   date: "Sep 01, 2023",
                   type: "application/pdf",
@@ -62,7 +106,7 @@ function App() {
                 }} />}/>
           <Route path='DUX776_2324.csv' element={<FileTemplate data={{
                   name: "DUX776_2324.csv",
-                  local_Src: DUCSV,
+                  local_src: DUCSV,
                   size: "1.8 GB",
                   date: "Jan 13, 2021",
                   type: "text/csv",

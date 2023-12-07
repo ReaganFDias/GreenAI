@@ -126,14 +126,45 @@
     z-index: 5;
     position: absolute;
     width: 80vw;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
   }
 
   .ai_name {
-    font-size: 13vw;
+    font-size: 12vw;
   }
 
   .ai_name_icon {
-    font-size: 13vw;
+    font-size: 12vw;
+  }
+
+  .profile_container {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  .profile_pic {
+    height: 100%;
+    width: 100%;
+  }
+
+  .status {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .username {
+    font-size: 7vw;
+  }
+
+  .sidebar_btn {
+    font-size: 5vw;
+    width: 45vw;
+    height: 13vw;
+  }
+
+  .icon {
+    padding: 0 2vw;
   }
 }
