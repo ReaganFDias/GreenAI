@@ -38,10 +38,7 @@ const Summary = (props) => {
                             <div className="user_status_summary">{props.data.user2_status}</div>
                         </div>
                     </div>
-                    <div className="stats_container_summary">
-                        <h1 id="stats_h1">Complete</h1>
-                        <PercentageComplete difference={4} complete={71} />
-                    </div>
+                    <PercentageComplete difference={4} complete={71} />
                     <div className='details_btn'>
                         <Link to={'management/' + props.data.name}>
                         <motion.button

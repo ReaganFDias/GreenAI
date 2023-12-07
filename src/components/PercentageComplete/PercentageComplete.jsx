@@ -6,6 +6,7 @@ import "./PercentageComplete.css";
 const PercentageComplete = (props) => {
   return (
     <div className="nivo_container">
+        <h1 className="stats_h1_main">Complete</h1>
         <ResponsivePie
             data={[
             {

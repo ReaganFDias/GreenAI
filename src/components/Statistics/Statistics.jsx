@@ -35,10 +35,7 @@ const Statistics = () => {
       {currentToggle ? (
         <Summary toggle={setToggle} data={currentDetails} />
       ) : null}
-      <div className="stats_container_main">
-        <h1 className="stats_h1_main">Complete</h1>
-        <PercentageComplete complete={67}/>
-      </div>
+      <PercentageComplete complete={67}/>
       <div className="recents_container">
         <h1 className="recents_h1">Recent</h1>
         <div className="recents_grid">
@@ -146,7 +143,7 @@ const Statistics = () => {
               className="file_icon"
             />
             <div className="icon_name_stats">
-              <p>Data_protection_policy_23.pdf</p>
+              <p>Data_protection_23.pdf</p>
               <div className="img_group_stats">
                 <FontAwesomeIcon
                   size="2xl"
