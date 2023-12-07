@@ -7,7 +7,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ImageConfigPDF from './assets/Image_configuration.pdf'
 import Policy from './assets/Data_protection_policy_23.pdf'
-import DUCSV from './assets/DUX776_2324.csv'
+import Glycine from './assets/Glycine_Conformer3D_medium.png'
+import DUCSV from './assets/DUX776_2324.pdf'
 import {
   Sidebar,
   FileTemplate
@@ -85,7 +86,7 @@ function App() {
                   name: "Knowledge_article.docx",
                   size: "3 MB",
                   date: "Aug 15, 2006",
-                  type: "application/docx",
+                  type: "application/pdf",
                   department: "Environmental",
                   user1: "Khushi",
                   user2: "Elizabeth",
@@ -109,7 +110,7 @@ function App() {
                   local_src: DUCSV,
                   size: "1.8 GB",
                   date: "Jan 13, 2021",
-                  type: "text/csv",
+                  type: "application/pdf",
                   department: "R&D",
                   user1: "Reagan",
                   user2: "Maisie",

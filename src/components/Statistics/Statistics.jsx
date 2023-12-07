@@ -12,7 +12,8 @@ import {
   PercentageComplete
 } from "../../components";
 import ImageConfigPDF from '../../assets/Image_configuration.pdf'
-import DUCSV from '../../assets/DUX776_2324.csv'
+import DUCSV from '../../assets/DUX776_2324.pdf'
+import Policy from '../../assets/Data_protection_policy_23.pdf'
 import "./Statistics.css";
 
 const Statistics = () => {
@@ -125,6 +126,7 @@ const Statistics = () => {
                 toggleSummary();
                 updateDetails({
                   name: "Data_protection_policy_23.pdf",
+                  local_src: Policy,
                   size: "1.6 GB",
                   date: "Sep 01, 2023",
                   type: "application/pdf",
@@ -171,7 +173,7 @@ const Statistics = () => {
                   local_Src: DUCSV,
                   size: "1.8 GB",
                   date: "Jan 13, 2021",
-                  type: "text/csv",
+                  type: "application/pdf",
                   department: "R&D",
                   user1: "Reagan",
                   user2: "Maisie",
@@ -187,7 +189,7 @@ const Statistics = () => {
               className="file_icon"
             />
             <div className="icon_name_stats">
-              <p>DUX776_2324.xlsx</p>
+              <p>DUX776_2324.pdf</p>
               <div className="img_group_stats">
                 <FontAwesomeIcon icon={faEllipsis} />
                 <FontAwesomeIcon icon={faXmark} style={{ color: "#ff1a1a" }} />
