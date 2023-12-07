@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCheck,
   faXmark,
+  faEllipsis
 } from "@fortawesome/free-solid-svg-icons";
 import ImageConfigPDF from './assets/Image_configuration.pdf'
 import DUCSV from './assets/DUX776_2324.csv'
@@ -45,6 +46,8 @@ function App() {
                   department: "Environmental",
                   user1: "Khushi",
                   user2: "Elizabeth",
+                  user1_status: <FontAwesomeIcon icon={faEllipsis} />,
+                  user2_status: <FontAwesomeIcon icon={faEllipsis} />
                 }} />}/>
           <Route path='Data_protection_policy_23.pdf' element={<FileTemplate data={{
                   name: "Data_protection_policy_23.pdf",
@@ -54,8 +57,10 @@ function App() {
                   department: "Legal",
                   user1: "Maisie",
                   user2: "Michelle",
+                  user1_status: <FontAwesomeIcon size="lg" icon={faCheck} style={{ color: "#00ff00" }} />,
+                  user2_status: <FontAwesomeIcon size="lg" icon={faCheck} style={{ color: "#00ff00" }} />
                 }} />}/>
-          <Route path='DUX776_2324.xlsx' element={<FileTemplate data={{
+          <Route path='DUX776_2324.csv' element={<FileTemplate data={{
                   name: "DUX776_2324.csv",
                   local_Src: DUCSV,
                   size: "1.8 GB",
@@ -64,6 +69,8 @@ function App() {
                   department: "R&D",
                   user1: "Reagan",
                   user2: "Maisie",
+                  user1_status: <FontAwesomeIcon icon={faEllipsis} />,
+                  user2_status: <FontAwesomeIcon icon={faXmark} style={{ color: "#ff1a1a" }} />
                 }} />}/>
         </Route>
         <Route path='settings' element={<Settings />} />

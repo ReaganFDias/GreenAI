@@ -52,9 +52,9 @@ const FileTemplate = (props) => {
               <div className="user_status">{currentStatus}</div>
           </div>
           <div className="btn_wrapper">
-            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('yes')}><FontAwesomeIcon size="2xl" icon={faXmark} style={{ color: "#ff1a1a" }} /></motion.button>
-            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('undecided')}><FontAwesomeIcon size="2xl" icon={faEllipsis} style={{ color: "#ffffff" }} /></motion.button>
-            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faCheck} style={{ color: "#00ff00" }} /></motion.button>
+            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={() => sproutPopup('yes')}><FontAwesomeIcon size="2xl" icon={faXmark} style={{ color: "#ff1a1a" }} /></motion.button>
+            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={() => sproutPopup('undecided')}><FontAwesomeIcon size="2xl" icon={faEllipsis} style={{ color: "#ffffff" }} /></motion.button>
+            <motion.button className='btn_status' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={() => sproutPopup('no')}><FontAwesomeIcon size="2xl" icon={faCheck} style={{ color: "#00ff00" }} /></motion.button>
           </div>
         </div>
         <div className="sprout_ai">

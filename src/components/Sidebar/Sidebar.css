@@ -109,6 +109,7 @@
   padding: 1.4vh 0.8vw;
   font-size: 0.8vw;
   border: none;
+  cursor: pointer;
 }
 
 .sidebar_btn:hover {
