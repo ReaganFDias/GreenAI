@@ -64,6 +64,10 @@
 }
 
 @media screen and (max-width: 500px) {
+  .settings-container {
+    border-radius: 0 0 0 0;
+  }
+  
   .vpn_switch {
     width: 35%;
   }
