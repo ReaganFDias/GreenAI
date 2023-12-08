@@ -12,6 +12,7 @@ import {
   PercentageComplete
 } from "../../components";
 import ImageConfigPDF from '../../assets/Image_configuration.pdf'
+import Article from '../../assets/knowledge_article.pdf'
 import DUCSV from '../../assets/DUX776_2324.pdf'
 import Policy from '../../assets/Data_protection_policy_23.pdf'
 import "./Statistics.css";
@@ -90,10 +91,11 @@ const Statistics = () => {
             onClick={() => {
                 toggleSummary();
                 updateDetails({
-                  name: "Knowledge_article.docx",
+                  name: "Knowledge_article.pdf",
+                  local_src: Article,
                   size: "3 MB",
                   date: "Aug 15, 2006",
-                  type: "application/docx",
+                  type: "application/pdf",
                   department: "Environmental",
                   user1: "Khushi",
                   user2: "Elizabeth",
@@ -109,7 +111,7 @@ const Statistics = () => {
               className="file_icon"
             />
             <div className="icon_name_stats">
-              <p>Knowledge_article.docx</p>
+              <p>Knowledge_article.pdf</p>
               <div className="img_group_stats">
                 <FontAwesomeIcon icon={faEllipsis} />
                 <FontAwesomeIcon icon={faEllipsis} />
@@ -170,7 +172,7 @@ const Statistics = () => {
                 toggleSummary();
                 updateDetails({
                   name: "DUX776_2324.csv",
-                  local_Src: DUCSV,
+                  local_src: DUCSV,
                   size: "1.8 GB",
                   date: "Jan 13, 2021",
                   type: "application/pdf",

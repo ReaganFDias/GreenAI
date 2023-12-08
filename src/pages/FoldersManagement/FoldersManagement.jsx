@@ -58,7 +58,7 @@ const FoldersManagement = () => {
                         style={{ color: "#76a30c" }}
                         />
                         <div className="icon_name">
-                        <p>Knowledge_article.docx</p>
+                        <p>Knowledge_article.pdf</p>
                         <div className="img_group">
                             <FontAwesomeIcon icon={faEllipsis} />
                             <FontAwesomeIcon icon={faEllipsis} />
@@ -112,7 +112,7 @@ const FoldersManagement = () => {
                         style={{ color: "#008cff" }}
                         />
                         <div className="icon_name">
-                        <p>DUX776_2324.csv</p>
+                        <p>DUX776_2324.pdf</p>
                         <div className="img_group">
                             <FontAwesomeIcon icon={faEllipsis} />
                             <FontAwesomeIcon icon={faXmark} style={{ color: "#ff1a1a" }} />

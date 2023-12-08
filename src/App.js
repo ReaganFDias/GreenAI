@@ -6,8 +6,8 @@ import {
   faEllipsis
 } from "@fortawesome/free-solid-svg-icons";
 import ImageConfigPDF from './assets/Image_configuration.pdf'
+import Article from './assets/knowledge_article.pdf'
 import Policy from './assets/Data_protection_policy_23.pdf'
-import Glycine from './assets/Glycine_Conformer3D_medium.png'
 import DUCSV from './assets/DUX776_2324.pdf'
 import {
   Sidebar,
@@ -83,7 +83,8 @@ function App() {
                 user2_status: <FontAwesomeIcon size="lg" icon={faCheck} style={{ color: "#00ff00" }} />
               }} />}/>
           <Route path='Knowledge_article.docx' element={<FileTemplate data={{
-                  name: "Knowledge_article.docx",
+                  name: "Knowledge_article.pdf",
+                  local_src: Article,
                   size: "3 MB",
                   date: "Aug 15, 2006",
                   type: "application/pdf",
